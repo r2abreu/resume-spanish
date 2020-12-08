@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
+
+html {
+	box-sizing: border-box;
+	font-size: 1rem;
+}
+
+*,
+:before,
+:after {
+	box-sizing: inherit;
+}
+
+body {
+	background: #ffffff;
+	font-family: Roboto;
+	line-height: 1.5;
+}
+
+h2 {
+	font-weight: 400;
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+}
+
+h3 {
+	font-weight: 600;
+}
+
+a:not(li > a) {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: #009696;
+}
+
+.resume {
+	display: grid;
+	max-width: 55rem;
+	margin: auto;
+	margin-top: 3rem;
+	grid-template-columns: 1fr;
+	grid-template-areas: "photo" "name" "contact" "about" "work" "education" "skills" "projects" "references";
+	grid-gap: 0.5rem 3rem;
+	padding: 0 2rem;
+	-webkit-box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.43);
+	-moz-box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.43);
+	box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.43);
+}
+
+.name {
+	grid-area: name;
+	text-align: center;
+}
+
+.name > h1 {
+	font-size: 3rem;
+	padding: 0;
+	margin: 0;
+	font-weight: 400;
+}
+
+.name > p {
+	color: #009696;
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+.photo {
+	grid-area: photo;
+	padding: 2rem 0 0;
+}
+
+.photo > img {
+	max-width: 100%;
+	width: 10rem;
+	border-radius: 50%;
+	display: block;
+	margin: auto;
+}
+
+.about {
+	grid-area: about;
+}
+
+.contact {
+	grid-area: contact;
+}
+
+.contact > ul {
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	list-style-type: none;
+}
+
+.contact > ul > li {
+	padding: 0.2rem 0;
+}
+
+.contact > ul > li > i {
+	padding: 0 0.7rem;
+}
+
+.contact > ul > li > a {
+	color: black;
+	text-decoration: none;
+}
+
+.work {
+	grid-area: work;
+}
+
+.work h3 {
+	margin: 0;
+}
+
+.work > .industry {
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	margin: 0;
+	background-color: #0096962a;
+	border-radius: 0.5em;
+	padding: 0.5em;
+}
+
+.work > p {
+	color: #009696;
+	font-weight: 600;
+}
+
+.work > p > time,
+.work > p > span {
+	color: grey;
+	font-weight: normal;
+}
+
+.work > ul {
+	padding: 0;
+	list-style-position: inside;
+}
+
+.skills {
+	grid-area: skills;
+}
+
+.education {
+	grid-area: education;
+}
+
+.education > p {
+	color: #009696;
+	font-weight: 600;
+}
+
+.education > p > time,
+.education > p > span {
+	color: grey;
+	font-weight: normal;
+}
+
+.projects {
+	grid-area: projects;
+}
+
+.projects > .blocks > span {
+	border: 1px solid black;
+	border-radius: 0.2rem;
+	padding: 0.2rem;
+	margin: 0.2rem 0.3rem;
+}
+
+hr {
+	width: 100%;
+	margin: auto;
+	padding: 0;
+	border: 0;
+	height: 1px;
+	background: #333;
+	background-image: linear-gradient(to right, #ccc, grey, #ccc);
+}
+
+@media screen and (min-width: 900px), print {
+	.resume {
+		grid-template-columns: 2fr 1fr;
+		grid-template-areas: "name photo" "contact contact" "about about" "work work" "skills skills"
+			"education education" "projects projects";
+	}
+	.name {
+		text-align: justify;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.contact > ul {
+		flex-direction: row;
+		justify-content: space-evenly;
+		background-color: #009696;
+		color: white;
+		border-radius: 5px;
+	}
+
+	.contact > ul > li > a {
+		color: white;
+	}
+}
+
+@media screen and (min-width: 1200px), print {
+	.resume {
+		grid-template-columns: 2fr 1fr;
+		grid-template-areas: "name photo" "contact contact" "work about" "work skills" "projects education"
+			"projects education";
+	}
+}
