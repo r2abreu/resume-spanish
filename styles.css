@@ -115,10 +115,6 @@ a:hover {
 	grid-area: work;
 }
 
-.work h3 {
-	margin: 0;
-}
-
 .work > .industry {
 	text-transform: uppercase;
 	font-size: 0.8rem;
@@ -139,7 +135,7 @@ a:hover {
 	font-weight: normal;
 }
 
-.work > ul {
+ul {
 	padding: 0;
 	list-style-position: inside;
 }
