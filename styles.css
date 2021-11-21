@@ -184,7 +184,7 @@ hr {
 	.resume {
 		grid-template-columns: 2fr 1fr;
 		grid-template-areas: "name photo" "contact contact" "about about" "work work" "skills skills"
-			"education education" "projects projects";
+			"education education";
 	}
 	.name {
 		text-align: justify;
@@ -209,7 +209,7 @@ hr {
 @media screen and (min-width: 1200px), print {
 	.resume {
 		grid-template-columns: 2fr 1fr;
-		grid-template-areas: "name photo" "contact contact" "work about" "work skills" "projects education"
-			"projects education";
+		grid-template-areas: "name photo" "contact contact" "work about" "work skills" "work education"
+			"work education";
 	}
 }
